@@ -8,11 +8,9 @@ Front end web development for dinosaurs
 
 ## Javascript Timeline
 
-- [Javascript Web Application](examples/js-timeline/js-site)
-- [jQuery Web Application](examples/js-timeline/jquery-site)
-- [React](examples/js-timeline/react-site-intro)
-- [React with JSX](examples/js-timeline/react-site-babel)
-- [React with JSX & Classes](examples/js-timeline/react-site-babel-classes)
+- [Javascript Web Application](examples/01.js-site)
+- [jQuery Web Application](examples/02.jquery-site)
+- [React Web Application](examples/06/react-site-full)
 
 ## React Basics
 
@@ -137,6 +135,12 @@ const element = (
 
 ```
 - [JSX visual compiler](https://babeljs.io/repl/)
+
+## React Site Examples
+
+- [React](examples/03.react-site-intro)
+- [React with JSX](examples/04.react-site-babel)
+- [React with JSX & Classes](examples/05.react-site-babel-classes)
 
 ## Create React App
 

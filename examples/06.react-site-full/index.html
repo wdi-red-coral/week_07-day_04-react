@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <!-- Page Info -->
+  <head>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+
+  <!-- Page Content -->
+  <body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+      const rootElement = document.getElementById('root')
+
+      class Header extends React.Component {
+        render() {
+          return (
+            <header>
+              <nav>
+                <img src="http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png" alt=""></img>
+                <span>&</span>
+                <img src="http://winedinewith.us/wp-content/uploads/2012/10/custom-logo-w-text2.png" alt=""></img>
+              </nav>
+              <h1>Review <a target="_blank" href="https://www.coffeebeanery.com/flavored-coffee">the Crew</a></h1>
+            </header>
+          )
+        }
+      }
+
+      class Main extends React.Component {
+        state = { coffees: [] }
+        componentDidMount(){
+          const coffeesString = window.localStorage.getItem('coffees')
+          if (coffeesString) {
+            const coffees = JSON.parse(coffeesString)
+            this.setState({coffees: coffees})
+          }
+        }
+        handleSubmit = event => {
+          event.preventDefault()
+
+          const newcoffee = {
+            name: event.target[0].value,
+            abv: event.target[1].value,
+            imageUrl: event.target[2].value,
+            review: event.target[3].value
+          }
+          const updatedcoffees = this.state.coffees.concat(newcoffee);
+          localStorage.setItem('coffees', JSON.stringify(updatedcoffees))
+          this.setState({coffees: updatedcoffees})
+          event.target.reset()
+        }
+        handleClear = event => {
+          event.preventDefault()
+          localStorage.setItem('coffees', '')
+          this.setState({coffees: []})
+        }
+        render() {
+          const coffees = this.state.coffees
+          return (
+            <main>
+              <div className="video-container">
+                <iframe src="https://www.youtube.com/embed/aBLYSO0DSVI" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+              </div>
+              <div className="form-container">
+                <form onSubmit={this.handleSubmit}>
+                  <input type="text" placeholder="coffee"></input>
+                  <input type="text" placeholder="ABV"></input>
+                  <input type="text" placeholder="Image URL"></input>
+                  <textarea rows="8" placeholder='Tasting Notes'></textarea>
+                  <input type="submit" value="Save Review"></input>
+                </form>
+              </div>
+              <div id="coffee-profiles-container">
+                {coffees.map((coffee, index) => (
+                  <div className="coffee-profile" key={index}>
+                    <img src={coffee.imageUrl} alt=""></img>
+                    <h3> {coffee.name} </h3>
+                    <p> {coffee.abv} </p>
+                    <p> {coffee.review} </p>
+                  </div>
+                ))}
+              </div>
+              <button type="button" onClick={this.handleClear}>Clear Reviews</button>
+
+            </main>
+          )
+        }
+      }
+
+      class App extends React.Component {
+        render() {
+          return (
+            <div className='container'>
+              <Header></Header>
+              <Main></Main>
+            </div>
+          )
+        }
+      }
+      const element = (
+        <App />
+      )
+      ReactDOM.render(element, rootElement)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+/* Page wide */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://static1.squarespace.com/static/57ed18381b631b4217bef4b9/t/59a350246a49631dd5237209/1503875139368/year+5_celebration.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size:cover;
+}
+
+/* Header */
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  padding: 10px;
+  overflow: hidden;/* parent element of floated children */
+}
+nav img {
+  float: left;
+  height: 50px;
+}
+nav span {
+  float:left;
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header h1 {
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  text-shadow: 5px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+header a {
+  color: white;
+}
+header a:hover {
+  color: black;
+  text-shadow: 1px 0 0 #FFF, 0 -1px 0 #FFF, 0 1px 0 #FFF, -1px 0 0 #FFF;
+
+}
+
+/* Form  */
+form {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+input, textarea {
+  margin: 20px 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 10px;
+}
+textarea {
+  width: 100%;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: rgba(0, 128, 0, 1);
+  color: white;
+}
+input[type=submit]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 128, 0, .8);
+}
+
+/* Video */
+.video-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.video-container iframe {
+  width: 744px;
+  height: 418px;
+}
+
+/* Beer List */
+#beer-profiles-container {
+  overflow: hidden;
+  text-align: center;
+}
+.beer-profile {
+  display: inline-block;
+  width: 25%;
+  background-color: white;
+  margin:2%;
+  padding: 2%;
+  background-color:rgba(255,255,255,0.8);
+  border-radius: 4px;
+}
+.beer-profile img {
+  width: 100%;
+  border-radius: 4px;
+}

@@ -1,0 +1,63 @@
+
+/* For laptops and desktops - screens equal to or greater than 1200px wide) */
+/* See index.css */
+
+/* For small laptops - screens 992px - 1199px wide */
+@media all and (max-width: 1199px) {
+  /* Beer List */
+  .beer-profile {
+    width: 33%;
+    margin: 5%;
+  }
+
+  /* Video */
+  .video-container iframe {
+    width: 744px;
+    height: 418px;
+  }
+}
+
+/* For tablets - screens 768px - 991px wide */
+@media all and (max-width: 991px) {
+  /* Beer List */
+  .beer-profile {
+    width: 50%;
+  }
+
+  /* Video */
+  .video-container iframe {
+    width: 744px;
+    height: 418px;
+  }
+}
+
+/* For phones - screens less than 768px wide */
+@media all and (max-width: 768px) {
+
+  /* Header */
+  nav img:first-of-type {
+    margin-left: 20%;
+  }
+
+  /* Beer List */
+  .beer-profile {
+    width:90%;
+  }
+
+  /* Form  */
+  input, textarea {
+    width: 90%;
+  }
+  input[type=submit] {
+    width: 90%;
+  }
+
+  /* Video */
+  .video-container {
+    margin: 0px;
+  }
+  .video-container iframe {
+    width: 372px;
+    height: 209px;
+  }
+}
