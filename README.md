@@ -63,12 +63,12 @@ As you're drawing this out, think about the following questions...
 
 ## JSX
 
-Element
+#### Element
 ```js
 const element = <h1>Hello, world!</h1>;
 ```
 
-Elements
+#### Multiple Elements
 - wrap in `()`
 - must have 1 single parent element
 ```js
@@ -80,13 +80,13 @@ const introductionElements = (
 );
 ```
 
-Interpolation 
+#### Interpolation 
 ```js
 const name = 'Sami';
 const element = <h1>Hello, {name}</h1>;
 ```
 
-Interpolation with functions
+#### Interpolation with functions
 ```js
 const formatName = (user) => user.firstName + ' ' + user.lastName;
 
@@ -103,13 +103,7 @@ const element = (
 
 ```
 
-Classes
-- use `className`
-```js
-const element = <h1 className='intro intro-alert'>Hello World</h1>;
-```
-
-Ternary Operator instead of `if` statement
+#### Ternary Operator instead of `if` statement
 ```js
 const name = 'Sami';
 
@@ -121,7 +115,13 @@ const element = (
 
 ```
 
-Comments
+#### Classes
+- use `className`
+```js
+const element = <h1 className='intro intro-alert'>Hello World</h1>;
+```
+
+#### Comments
 ```js
 const name = 'Sami';
 
