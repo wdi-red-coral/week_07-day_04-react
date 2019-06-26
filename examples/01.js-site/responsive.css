@@ -1,11 +1,10 @@
 
 /* For laptops and desktops - screens equal to or greater than 1200px wide) */
 /* See index.css */
-
 /* For small laptops - screens 992px - 1199px wide */
 @media all and (max-width: 1199px) {
-  /* Beer List */
-  .beer-profile {
+  /* coffee List */
+  .coffee-profile {
     width: 33%;
     margin: 5%;
   }
@@ -19,8 +18,8 @@
 
 /* For tablets - screens 768px - 991px wide */
 @media all and (max-width: 991px) {
-  /* Beer List */
-  .beer-profile {
+  /* coffee List */
+  .coffee-profile {
     width: 50%;
   }
 
@@ -39,8 +38,8 @@
     margin-left: 20%;
   }
 
-  /* Beer List */
-  .beer-profile {
+  /* coffee List */
+  .coffee-profile {
     width:90%;
   }
 

@@ -39,27 +39,27 @@ const displayReview = function (coffeeData) {
   document.querySelector('#coffee-profiles-container').append(coffeeProfileHTML)
 }
 
-const saveReview = function (newcoffee) {
+const saveReview = function (newCoffee) {
   // Save coffees
   if (window.localStorage.getItem('coffees')) {
     const coffees = JSON.parse(window.localStorage.getItem('coffees'))
-    coffees.push(newcoffee)
+    coffees.push(newCoffee)
     localStorage.setItem('coffees', JSON.stringify(coffees))
 
   // Save first coffee
   } else {
-    const coffees = [newcoffee]
+    const coffees = [newCoffee]
     localStorage.setItem('coffees', JSON.stringify(coffees))
   }
 }
 
-const reviewcoffee = function (event) {
+const reviewCoffee = function (event) {
   event.preventDefault()
 
   // get inputs from user to create coffee object
   const formInputs = document.querySelectorAll('#coffee-review-form input')
   const formTextArea = document.querySelectorAll('#coffee-review-form textarea')
-  const newcoffee = {
+  const newCoffee = {
     name: formInputs[0].value,
     abv: formInputs[1].value,
     imageUrl: formInputs[2].value,
@@ -67,10 +67,10 @@ const reviewcoffee = function (event) {
   }
 
   // save coffee
-  saveReview(newcoffee)
+  saveReview(newCoffee)
 
   // display coffee
-  displayReview(newcoffee)
+  displayReview(newCoffee)
 
   // reset form
   event.target.reset()
@@ -98,6 +98,6 @@ window.onload = function () {
   displayReviews()
 
   // set up form
-  document.querySelector('#coffee-review-form').onsubmit = reviewcoffee
+  document.querySelector('#coffee-review-form').onsubmit = reviewCoffee
   document.querySelector('#clear-reviews').onclick = deleteReviews
 }

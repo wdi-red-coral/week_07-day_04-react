@@ -78,12 +78,12 @@ input[type=submit]:hover {
   height: 418px;
 }
 
-/* Beer List */
-#beer-profiles-container {
+/* coffee List */
+#coffee-profiles-container {
   overflow: hidden;
   text-align: center;
 }
-.beer-profile {
+.coffee-profile {
   display: inline-block;
   width: 25%;
   background-color: white;
@@ -92,7 +92,7 @@ input[type=submit]:hover {
   background-color:rgba(255,255,255,0.8);
   border-radius: 4px;
 }
-.beer-profile img {
+.coffee-profile img {
   width: 100%;
   border-radius: 4px;
 }
