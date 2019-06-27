@@ -81,9 +81,14 @@ const introductionElements = (
 #### Self Closing Tags
 - need to end the tag with `/>` to close the tag
 ```js
-<img src="path.jpg" />
+const selfClosingExamples = (
+  <div>
+    <img src="path.jpg" />
+    <br />
+    <hr />
+  </div>
+);
 
-<br />
 ```
  
 #### Interpolation 
