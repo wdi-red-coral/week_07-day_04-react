@@ -78,6 +78,14 @@ const introductionElements = (
 );
 ```
 
+#### Self Closing Tags
+- need to end the tag with `/>` to close the tag
+```js
+<img src="path.jpg" />
+
+<br />
+```
+ 
 #### Interpolation 
 ```js
 const name = 'Sami';
